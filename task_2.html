@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 2</title>
+</head>
+<body>
+	<input type="text" id="text">
+	<div id="mydiv"></div>
+
+</body>
+
+<script>
+	document.getElementById("text").addEventListener("keyup", updateDiv);
+
+	function updateDiv() {
+		document.getElementById('mydiv').innerHTML = document.getElementById('text').value;
+	}
+</script>
+</html>
