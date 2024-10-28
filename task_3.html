@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 3</title>
+</head>
+<body>
+	<h1>Send Form</h1>
+	<form id="myForm">
+		<h2>Name:</h2>
+		<input type="text" id="name">
+		<br>
+		<h2>Age:</h2>
+		<input type="number" id="age">
+		<br>
+		<h2>Email:</h2>
+		<input type="email" id="email">
+		<br>
+		<br>
+		<input type="submit" id="submit" name="Submit">
+	</form>
+
+</body>
+
+<script>
+	document.getElementById("myForm").addEventListener("submit", sendForm);
+
+	function sendForm(event) {
+		event.preventDefault();
+		let name = document.getElementById('name').value;
+		let age = document.getElementById('age').value;
+		let email = document.getElementById('email').value;
+		if (age == name == email == "") {return};
+		alert(`Hi ${name}, you are ${age} years old and your email-address is "${email}".`);
+	}
+</script>
+</html>
